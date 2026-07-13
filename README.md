@@ -14,26 +14,26 @@ El alcance de la arquitectura base está conformado por la integración de dos m
 API Registrar Cliente (Administrador de Clientes): Microservicio encargado de gestionar el registro y guardado de nuevos clientes. Gestiona también la búsqueda de clientes específicos, la actualización de perfiles existentes y la eliminación de registros en el sistema.  
 API Registrar Cita (Administrador de Citas): Microservicio dedicado a agendar horas médicas y eliminarlas (registrar, modificar y eliminar citas para clientes ya registrados en el sistema).  
 Rutas principales del Gateway:
-GET /api/v1/clientes/{id} 
-POST /api/v1/clientes 
-PUT /api/v1/clientes/{id}
-DELETE /api/v1/clientes/{id} 
-POST /api/v1/citas 
-PUT /api/v1/citas/{id}
-DELETE /api/v1/citas/{id}
-Instrucciones:
+1. GET /api/v1/clientes/{id} 
+2. POST /api/v1/clientes 
+3. PUT /api/v1/clientes/{id}
+4. DELETE /api/v1/clientes/{id} 
+5. POST /api/v1/citas 
+6. PUT /api/v1/citas/{id}
+7. DELETE /api/v1/citas/{id}
 
+Instrucciones:
 Empezamos configurando Laragon ya que este configura MySQL/MariaDB en el puerto 3306. Para cambiarlo al puerto 3309, sigue estos pasos:
 Paso a paso en Laragon:
-Detén los servicios: Abre la interfaz de Laragon y asegúrate de que todos los servicios estén detenidos (botón "Detener").
-Accede a las preferencias: Haz clic en el ícono del engranaje (Configuración/Preferences) en la esquina superior derecha de la ventana de Laragon.
+1. Detén los servicios: Abre la interfaz de Laragon y asegúrate de que todos los servicios estén detenidos.
+2. Accede a las preferencias: Haz clic en el ícono del engranaje (Configuración/Preferences) en la esquina superior derecha de la ventana de Laragon.
 Cambia el puerto:
-Dirígete a la pestaña "Services & Ports" (Servicios y Puertos).
-En la sección de MySQL/MariaDB, busca la casilla del puerto (que debería decir 3306) y cámbiala a 3309.
-Cierra la ventana de configuración (los cambios se guardan automáticamente).
-Inicia los servicios: Haz clic en "Iniciar Todo". Si el puerto 3309 está libre, MySQL arrancará sin problemas.
-En tu IDEE;
+3. Dirígete a la pestaña Servicios y Puertos.
+4. En la sección de MySQL/MariaDB, busca la casilla del puerto (que debería decir 3306) y cámbiala a 3309.
+5. Cierra la ventana de configuración.
+6. Inicia los servicios: Haz clic en "Iniciar Todo". Si el puerto 3309 está libre, MySQL arrancará sin problemas.
 
+En tu IDEE;
 1. Preparación del Entorno (Visual Studio Code)
 Asegúrar de tener instalado el Extension Pack for Java y el Spring Boot Extension Pack.
 Abre tu IDE y carga la carpeta de la API de Clientes. Cada api se debe abrir en ventanas distintas
